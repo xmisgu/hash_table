@@ -217,8 +217,10 @@ int main()
 
         t1 = clock();
         for (int i = 0; i < m; i++) {
-            auto entry = table.find(get_rand_key());
+            std::string rand_key = get_rand_key();
+            auto entry = table.find(rand_key);
             if (entry) {
+                //table.delete_item(rand_key);
                 hits++;
             }
         }
