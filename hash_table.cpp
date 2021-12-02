@@ -151,7 +151,7 @@ private:
     }
 
     std::vector<std::forward_list<std::pair<std::string, T>>> table;
-    size_t n;
+    unsigned int n;
 };
 
 struct TableValues {
@@ -226,8 +226,8 @@ int main()
 
         std::cout << "Liczba trafien: " << hits << std::endl;
         time = (t2 - t1) / (double)CLOCKS_PER_SEC;
-        std::cout << "Calkowity czas dodawania: " << time << std::endl;
-        std::cout << "Sredni czas dodawania: " << time / n << std::endl;
+        std::cout << "Calkowity czas wyszukiwania: " << time << std::endl;
+        std::cout << "Sredni czas wyszukiwania: " << time / n << std::endl;
         std::cout << "-----------------------------------------------" << std::endl;
         
         std::cout << table.statistics();
